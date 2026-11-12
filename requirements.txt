@@ -1,0 +1,5 @@
+# Runtime is supplied by the pinned official CPU image in Dockerfile.
+# The image contains vLLM 0.27.0 and its complete, version-matched dependency set.
+# Application and model-download scripts use only Python standard library and
+# huggingface_hub, which is already a dependency of the pinned vLLM image.
+vllm==0.27.0

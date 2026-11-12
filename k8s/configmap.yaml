@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: llm-config
+  namespace: llm-inference
+data:
+  MODEL_ID: "Qwen/Qwen2.5-1.5B-Instruct"
+  MODEL_DIR: "/models/model"
+  PORT: "8000"
+  MAX_MODEL_LEN: "2048"
+  MAX_NUM_SEQS: "4"
+  MAX_NUM_BATCHED_TOKENS: "1024"
+  LOG_LEVEL: "INFO"
+  VLLM_CPU_KVCACHE_SPACE: "4"
+  VLLM_CPU_OMP_THREADS_BIND: "auto"
